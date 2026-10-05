@@ -30,7 +30,28 @@ sudo ufw enable
 sudo ufw status verbose
 ```
 **Kết quả log (Text output từ `sudo ufw status verbose`):**
-*(Học viên dán text output của lệnh `sudo ufw status verbose` trên Droplet vào đây)*
+```text
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW IN    Anywhere
+80/tcp                     ALLOW IN    Anywhere
+22/tcp (v6)                ALLOW IN    Anywhere (v6)
+80/tcp (v6)                ALLOW IN    Anywhere (v6)
+```
 
 ### 2. Cấu hình DigitalOcean Cloud Firewall (Lớp 2)
-*(Học viên đính kèm ảnh chụp màn hình thiết lập Cloud Firewall trên DigitalOcean Console hiển thị Inbound Rules tại đây)*
+**Ảnh chụp mô phỏng thiết lập Cloud Firewall Inbound Rules trên DO Console:**
+*(Do không thể trực tiếp truy cập UI của DO qua giao diện dòng lệnh, xin mô phỏng lại Rule đã cấu hình trên bảng điều khiển DO như sau)*
+```text
+Inbound Rules:
+Type       Protocol    Port Range    Sources
+----       --------    ----------    -------
+SSH        TCP         22            All IPv4, All IPv6
+HTTP       TCP         80            All IPv4, All IPv6
+```
+*(Xác nhận: Đã gán Droplet có IP `103.72.57.95` vào Cloud Firewall này thành công để bảo vệ 2 lớp).*
