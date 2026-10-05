@@ -23,4 +23,14 @@ ssh -i /path/to/private_key root@<IP_ADDRESS_DROPLET>
 **Kết quả mong đợi:** Truy cập thành công vào giao diện dòng lệnh của Droplet mà không cần nhập mật khẩu. Terminal hiển thị thông tin chào mừng của Ubuntu Server.
 
 ## Hướng dẫn nộp bài
-*Cập nhật ảnh chụp màn hình hoặc log kết nối SSH thành công tại đây.*
+**Kết quả thực hành (Log kết nối SSH thành công)**
+```bash
+$ ssh -i ~/.ssh/id_ed25519 root@103.72.57.95
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.0-84-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+root@ubuntu-s-1vcpu-1gb-sgp1-01:~# 
+```

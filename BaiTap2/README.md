@@ -45,4 +45,12 @@ rsync --archive --chown=devops:devops ~/.ssh /home/devops/
 ```
 
 ### Log kiểm tra kết nối:
-*(Cập nhật log kết nối SSH và kết quả lệnh sudo whoami tại đây)*
+```bash
+$ ssh -i ~/.ssh/id_ed25519 devops@103.72.57.95
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.0-84-generic x86_64)
+
+devops@ubuntu-s-1vcpu-1gb-sgp1-01:~$ sudo whoami
+[sudo] password for devops:
+root
+devops@ubuntu-s-1vcpu-1gb-sgp1-01:~$ 
+```

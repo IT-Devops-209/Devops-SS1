@@ -33,3 +33,19 @@ sudo rm /etc/nginx/sites-enabled/default
 sudo nginx -t
 sudo systemctl reload nginx
 ```
+
+## Kiểm tra (Log kết quả)
+```bash
+$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+
+$ curl -I http://103.72.57.95
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Mon, 05 Oct 2026 07:15:02 GMT
+Content-Type: text/html
+Content-Length: 213
+Last-Modified: Mon, 05 Oct 2026 07:12:35 GMT
+Connection: keep-alive
+```
